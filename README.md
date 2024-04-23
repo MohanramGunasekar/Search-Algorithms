@@ -1,4 +1,4 @@
-# Linear Search and Binary search
+![image](https://github.com/MohanramGunasekar/Search-Algorithms/assets/139841812/7274a30d-3653-4beb-bcea-9e8cdd245cc7)# Linear Search and Binary search
 ## Aim:
 To write a program to perform linear search and binary search using python programming.
 ## Equipment’s required:
@@ -19,12 +19,51 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
+def search(array,key,n):
+    for i in range(0,n):
+        if key==array[i]:
+            return i
+            
+    
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+n=len(array)
+print(array)
+result=search(array,key,n)
+if result==-1:
+  print("Element not found")
+else:
+ print("Element found at index: ",result)
+
+
 
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+def binary(array,key,low,high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            low=mid+1
+        elif array[mid]>key:
+            high=mid-1
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
@@ -33,15 +72,37 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+def binary(array,key,low,high):
+    if high>=low:
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            return binary(array,key,mid+1,high)
+        elif array[mid]>key:
+            return binary(array,key,low,mid-1)
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
 
 ```
 ## Sample Input and Output
+![Screenshot 2024-04-23 110502](https://github.com/MohanramGunasekar/Search-Algorithms/assets/139841812/413f71c9-6443-4d91-9600-4c11ee97a423)
 
+![Screenshot 2024-04-23 110526](https://github.com/MohanramGunasekar/Search-Algorithms/assets/139841812/11a6c09d-9090-431d-91fe-88275d7da2df)
 
+![Screenshot 2024-04-23 110612](https://github.com/MohanramGunasekar/Search-Algorithms/assets/139841812/83433bf9-2e7a-4f1e-86ed-7917851323aa)
 
 
 
