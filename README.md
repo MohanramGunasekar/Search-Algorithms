@@ -1,4 +1,4 @@
-![image](https://github.com/MohanramGunasekar/Search-Algorithms/assets/139841812/7274a30d-3653-4beb-bcea-9e8cdd245cc7)# Linear Search and Binary search
+# Linear Search and Binary search
 ## Aim:
 To write a program to perform linear search and binary search using python programming.
 ## Equipment’s required:
